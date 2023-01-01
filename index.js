@@ -102,7 +102,8 @@ app.get('/task/details/:id', async (req, res) => {
   }
 });
 
-app.get('/task/update/:id', async (req, res) => {
+// update task status
+app.put('/task/update/:id', async (req, res) => {
   try {
     const id = req.params.id;
     const updateTaskData = req.body;
@@ -123,6 +124,7 @@ app.get('/task/update/:id', async (req, res) => {
   }
 });
 
+// delete task
 app.delete('/task/delete/:id', async (req, res) => {
   try {
     const id = req.params.id;
